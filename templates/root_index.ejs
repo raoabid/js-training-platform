@@ -1,0 +1,48 @@
+<!-- templates/root_index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Training Platform</title>
+    <link rel="stylesheet" href="/css/global.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <h1>JavaScript Training Platform</h1>
+    </header>
+    <main>
+        <h2>Projects</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Project Title</th>
+                        <th>Start</th>
+                        <th>Final</th>
+                        <th>GitHub Repo</th>
+                        <th>GitHub Pages</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% projects.forEach(project => { %>
+                        <tr>
+                            <td><%= project.id %></td>
+                            <td><%= project.title %></td>
+                            <td><a href="/start/<%= project.id %>-<%= project.name %>/index.html">Start</a></td>
+                            <td><a href="/final/<%= project.id %>-<%= project.name %>/index.html">Final</a></td>
+                            <td><a href="https://github.com/raoabid/js-training-platform/tree/main/final/<%= project.id %>-<%= project.name %>" target="_blank">Code</a></td>
+                            <td><a href="https://raoabid.github.io/js-training-platform/final/<%= project.id %>-<%= project.name %>" target="_blank">Live Demo</a></td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <p>JavaScript Training Platform</p>
+    </footer>
+    <script src="/js/global.js"></script>
+</body>
+</html>
