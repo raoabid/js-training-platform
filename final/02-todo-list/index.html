@@ -1,0 +1,76 @@
+<!-- templates/final_index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo List - Final</title>
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <h1>ToDo List - Final</h1>
+        <nav>
+            <a href="../../index.html">Home</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="todo-header">
+                <h2>ToDo List</h2>
+            </div>
+            <div class="todo-body">
+                <form id="todo-form">
+                    <input type="text" id="todoText" class="todo-input" placeholder="Add your items" />
+                    <button type="submit" id="add-todo-item">Add</button>
+                </form>
+            </div>
+            <h5 id="alert-message"></h5>
+            <ul id="list-items" class="list-items">
+                <li class="todo-item">
+                    <div title="Hit Double Click and Complete" class="todo-text">1st ToDo item</div>
+                    <div class="todo-control">
+                        <button class="todo-controls-edit">✏️</button>
+                        <button class="todo-controls-delete">❌</button>
+                    </div>
+                </li>
+                <li class="todo-item complete">
+                    <div title="Hit Double Click and Complete" class="todo-text">2nd ToDo item</div>
+                    <div class="todo-control">
+                        <button class="todo-controls-edit">✏️</button>
+                        <button class="todo-controls-delete">❌</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </main>
+    <aside>
+        <div class="instructions">
+            <h2>Instructions:</h2>
+            <p>Write JavaScript to achieve the following:</p>
+            <p>Create, Read, Update and Delete Functions.
+            <p>
+            <p>Hitting Enter key after input or clicking Add button should add the item in ToDO List
+            <p>
+
+            <h3>Stretch Goal:</h3>
+            <p>Double Click the item to make it complete</p>
+            <p>Use Local storage to persist data</p>
+        </div>
+        <div class="links">
+            <a href="https://codepen.io/raoabid/pen/azbNeeZ" target="_blank">
+                <button>View on CodePen</button>
+            </a>
+        </div>
+    </aside>
+
+    <footer>
+        <p>JavaScript Training Platform</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="../../js/global.js"></script>
+</body>
+</html>
